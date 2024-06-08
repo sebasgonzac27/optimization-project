@@ -1,94 +1,132 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background-color: #212121;
-    color: white;
-    font-size: 1.2rem;
+body {
+  display: flex;
+
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #212121;
+  color: white;
+  font-size: 1rem;
 
 }
-header{
-    display: flex;
-    justify-content: center;
-    background: #1b1b1b;
-    width: 100%;
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1b1b1b;
+  height: 70px;
+  width: 100%;
 }
-main{
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  height: calc(100vh - 70px);
+
+  .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 
-    .inputs-box{
-        display: flex;
+    .input-box {
+      display: flex;
 
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
 
-        #problem-input, #problem-output{
-            border-radius: 10px;
-            border: none;
-            background-color: #323232;
-            color: white;
-            padding: 10px;
-            width: 360px;
-            height: 200px;
-            font-size: 1.2rem;
-            font-family: 'Courier New', Courier, monospace;
+      #problem-input {
+        border-radius: 10px;
+        border: none;
+        background-color: #323232;
+        color: white;
+        padding: 10px;
+        width: 360px;
+        height: 500px;
+        font-size: 1.2rem;
+        font-family: 'Courier New', Courier, monospace;
 
-        }
+      }
 
     }
-    .button{
+
+    .button {
       width: 150px;
       height: 40px;
-      border: 1px solid #000;
       border-radius: 5px;
+      border: none;
       background-color: #009714;
       color: #fff;
       cursor: pointer;
       font-size: 1.1rem;
       font-weight: bold;
-  }
-  .button:hover{
+    }
+
+    .button:hover {
       background-color: #00b41e;
-  }
-  .button:active{
+    }
+
+    .button:active {
       background-color: #008a11;
+    }
   }
-  pre{
+
+
+  pre {
     width: 600px;
     padding: 10px;
-    height: 300px;
+    height: 600px;
     position: relative;
-    .copy{
+    background: #282c34;
+    padding: 0 0;
+    perspective: 1000px;
+    
+
+    .copy {
       position: absolute;
       display: flex;
       justify-content: center;
       align-items: center;
-      top: 30px;
-      right: -40px;
+      top: -25px;
+      right: -50px;
       background: #009714;
       color: white;
       width: 40px;
       height: 40px;
       border-radius: 3px;
       cursor: pointer;
+      z-index: 10;
+      transform: rotateY(-10deg);
+      .icon{
+        width: 20px;
+        color: white;
+      }
+      
     }
-    .code{
+    .copy:hover {
+      background-color: #00b41e;
+    }
+
+    .copy:active {
+      background-color: #008a11;
+    }
+
+    .code {
       /* background: #282c34; */
+      margin-top: -60px;
+      position: relative;
       border-radius: 5px;
-      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9);
       width: 100%;
       height: 100%;
-      padding: 30px;
-
+      transform-origin: left center;
+      transform: rotateY(-9deg);
 
     }
   }
